@@ -126,6 +126,13 @@ HeapDump 에 뛰어져 적혀져 있는 것들을 보니 대부분 **Jpa Query C
 
 새벽시간대 결과로 Heap 사용량이 **80% -> 40%** 가 감소되었다. 다만 놀라운건 GC 의 Count 횟수는 별 차이가 나지 않는다는 것이다. 
 
+## 운영환경에 적용 결과
+
+<img width="927" alt="image" src="https://user-images.githubusercontent.com/57784077/204677676-899f69ab-0599-47f6-9c98-040e0b9d0bca.png">
+
+기존에는 Heap 을 6 ~ 7GB 사용하던 부분이 500mb ~ 1.5GB 를 사용하게 됬다.
+모니터링 후 인스턴스 사이즈 조정 고민필요
+
 ## 후기
 
 결과적으로 Heap 사용량은 줄이는데 성공했다. 

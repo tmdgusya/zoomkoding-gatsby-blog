@@ -22,8 +22,8 @@ categories: algorithm
 
 음, 결국에 문자와 나온 숫자를 매칭해두고
 
-aaabbc -> a - 3, b - 2, c - 1
-bbbaac -> a - 2, b - 3, c - 1 
+- aaabbc -> a - 3, b - 2, c - 1
+- bbbaac -> a - 2, b - 3, c - 1 
 
 라고 했을때 결국 문자는 중요하지 않고, 어느것이던 매칭된 수만 같다면 결국 Close 한것이 아닌가?
 

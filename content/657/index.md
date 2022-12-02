@@ -29,6 +29,7 @@ bbbaac -> a - 2, b - 3, c - 1
 
 ## 풀이 방법 추상화(수도 코드)
 
+```kotlin
 fun closeString(word1, word2) {
     // 변환할때 길이를 바꾸는건 없으므로 길이가 다르면 반드시 False 임.
     if (word1.length != word2.length) {
@@ -59,6 +60,7 @@ fun Collect.isConvertable(other: Collect) {
 
     return true
 }
+```
 
 ## 코드로 구현
 

@@ -1,6 +1,6 @@
 ---
 emoji: 
-title: 코틀린의 가변 컬렉션은 불변일까?
+title: 코틀린의 불변 컬렉션은 불변일까?
 date: '2022-12-05 20:34:00'
 author: Roach
 tags: kotlin

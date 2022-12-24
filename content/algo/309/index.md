@@ -60,7 +60,7 @@ fun climbStairsForIter(n: Int): Int =
 ```
 
 반복문으로 변경하면 위와 같이 변경된다. 
-이제 인자로 넘길 수를 찾아보면 acc2 = acc1 + acc2 이고, acc1 은 acc2 를 받아야 한다. 그래서 꼬리재귀함수로 최적화 해보면 아래와 같다.
+이제 인자로 넘길 수를 찾아보면 **acc2 = acc1 + acc2** 이고, **acc1** 은 **acc2** 를 받아야 한다. 그래서 꼬리재귀함수로 최적화 해보면 아래와 같다.
 
 ```kotlin
 tailrec fun climbStairs(n: Int, acc1: Int = 1, acc2: Int = 2): Int = when (n) {

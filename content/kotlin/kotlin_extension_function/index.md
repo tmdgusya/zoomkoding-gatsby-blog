@@ -71,7 +71,7 @@ fun Any.toJsonNode(): JsonNode {
 
 이렇게 확장 함수를 추가하게 되면 아래와 같이 우리가 이용하는 클래스 들에서 사용이 가능합니다.
 
-```kotiln
+```kotlin
 val data = getUserDate()
 val json: JsonNode = data.toJsonNode()
 ```
@@ -102,7 +102,7 @@ fun test() {
 
 따라서 위와 같은 경우에는 파일 내에서 `getDomain()` 확장 함수를 `private` 접근 제어자로 권한을 축소시키는게 좋습니다. 혹은 기존 처럼 Utils 시스템을 붙이거나 `package email` 의 최상위 함수(Top-Level Function) 으로 두는것이 좋다고 생각됩니다.
 
-```kotiln
+```kotlin
 package email
 
 fun getDomain(email: String): String {
@@ -112,7 +112,7 @@ fun getDomain(email: String): String {
 
 그리고 확장함수는 기본적으로 객체 자체를 확장하는 것이 아니라 정적으로 바인딩(static binding) 하는데, 이로 인한 혼선도 빚을 수 있게 된다.
 
-```kotiln
+```kotlin
 open class Shape
 class Rectangle: Shape()
 

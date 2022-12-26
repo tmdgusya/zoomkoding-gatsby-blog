@@ -110,7 +110,7 @@ fun getDomain(email: String): String {
 }
 ```
 
-그리고 확장함수는 기본적으로 **객체 자체를 직접 수정하여 변경(확장)하는 것이 아니라 정적으로 바인딩(static binding)** 하는데, 이로 인한 혼선도 빚을 수 있게 된다.
+그리고 확장함수는 기본적으로 **객체 자체를 직접 수정하여 변경(확장)하는 것이 아니라 정적으로 바인딩(static binding)** 하는데, 이로 인한 혼선도 빚을 수 있게 됩니다.
 
 ```kotlin
 open class Shape
@@ -126,7 +126,7 @@ fun printClassName(s: Shape) {
 printClassName(Rectangle())
 ```
 
-위 결과가 어떻게 출력될거라고 생각되는가? 결과는 `"Shape"` 이다. 보통은 Rectangle 객체를 넣었으니 `"Rectangle"` 이 나와야 할 것 같지만 아니다. 이는, printClassName 의 파라미터인 `s` 가 이미 Shape 이라는 타입으로 선언되어져 있기 때문이다. 기본적으로 확장함수는 **다형성**을 지니고 있지 않다.
+위 결과가 어떻게 출력될거라고 생각되나요? 결과는 `"Shape"` 입니다. 보통은 Rectangle 객체를 넣었으니 `"Rectangle"` 이 나와야 할 것 같지만 아닙니다. 이는, printClassName 의 파라미터인 `s` 가 이미 Shape 이라는 타입으로 선언되어져 있기 때문입니다. 기본적으로 확장함수는 **다형성**을 지니고 있지 않습니다.
 
 ## 마치며
 

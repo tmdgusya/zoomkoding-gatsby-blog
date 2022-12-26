@@ -88,4 +88,9 @@ module.exports = {
       },
     ],
   },
+  comments: {
+    utterances: {
+        repo: 'tmdgusya/zoomkoding-gatsby-blog' // zoomkoding/gatsby-starter-zoomkoding
+    },
+  },
 };

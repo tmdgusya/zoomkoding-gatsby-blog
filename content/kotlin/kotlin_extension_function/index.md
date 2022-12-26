@@ -9,7 +9,7 @@ categories: kotlin
 
 # 코틀린 확장 기능
 
-코틀린에는 기존 Type 의 연산을 쉽게 확장할수 있도록 **확장(Extensions) 기능**을 제공한다.  
+코틀린에는 기존 Type 의 연산을 쉽게 확장할수 있도록 **확장(Extensions) 기능**을 제공합니다.  
 기존 객체지향 시스템에서는 객체의 연산을 확장해야 할때 주로 고려했던 방법으로는 **상속** 이 있거나 **합성**을 활용한 **데코레이터 패턴(Decorator Pattern)** 이 있습니다.
 
 <img width="987" alt="image" src="https://user-images.githubusercontent.com/57784077/209562510-c850d449-ea1b-440c-aa23-f63b5bb8167d.png">

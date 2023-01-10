@@ -30,6 +30,8 @@ categories: kotlin 책리뷰
 
 문제는 간단하게 지그재그로 노드를 읽는것이다. 첫번째는 3을 읽고, 두번째는 오른쪽부터-왼쪽, 다음에는 왼쪽-오른쪽 ... 이런 방법으로 노드를 읽어나가는 것이다. 그래서 내가 작성하고 통과했던 코드는 아래와 같다.
 
+### 원본 코드
+
 ```kotlin
 fun mySolution(root: TreeNode?): List<List<Int>> {
     // rootNode 가 없다면 빈 배열을 리턴
@@ -74,7 +76,9 @@ private fun addListByZigZag(map: Map<Int,  ArrayDeque<Int>>, depth: Int, value: 
 }
 ```
 
-일단 코드에서 `printNodeResultByDepth[depth] = ArrayDeque()` 를 하는 과정은 해당 Depth 에 결과물을 출력하기 위한 초기화 과정이다. 따라서 이 함수를 함수로 추출하여 리팩터링하자.
+### 확장함수로 추출
+
+일단 코드에서 `printNodeResultByDepth[depth] = ArrayDeque()` 를 하는 과정은 해당 Depth 에 결과물을 출력하기 위한 초기화 과정이다. 따라서 이 함수를 **함수로 추출하여 리팩터링**하자.
 
 ```kotlin
 private fun init(printNodeResultByDepth: HashMap<Int, ArrayDeque<Int>>, depth: Int) {
@@ -98,8 +102,8 @@ printNodeResultByDepth.init(0)
 ```
 
 ```kotlin
-    printNodeResultByDepth.init(0)
-    printNodeResultByDepth[0]?.add(_root.`val`)
+printNodeResultByDepth.init(0)
+printNodeResultByDepth[0]?.add(_root.`val`)
 ```
 
 아까의 코드에서 위와 같이 해당 depth 를 init 하며 add 를 하는 코드가 있는데, 이를 위해 Map 을 리턴해주도록 하자.

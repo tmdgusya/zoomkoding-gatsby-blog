@@ -95,3 +95,26 @@ println(result)
 ```
 
 중요한건 `let` 안에서 받은 `a` 는 Closure 된 값이기 때문에 해당 Scope 내에서 변경이 불가능 하다는 점이다. 그래서 a 가 nullable 타입일 경우에 `a?.let(some)` 과 같은 함수를 사용할때도 `some` 안에서는 `a` 를 None-Null 타입으로 이용가능한 것이다.
+
+let 도 결국 Java 와 같은 곳에서는 아래와 유사한 함수이다. (오랜만에 Java 적으려니 문법이 잘 기억안나서 아래와 같이 적었다..)
+
+```java
+public static R let(obj: T, block: (T) -> R) {
+    // do something
+}
+```
+
+즉, 위와 같은 함수도 결국 아래와 같이 Currying 이 가능하다.
+
+```kotlin
+fun <T : Any, R : Any> curriedLet(obj: T): ((T) -> R) -> R {
+    fun executeBlockWithObj(block: (T) -> R): R {
+        return block(obj)
+    }
+
+    return ::executeBlockWithObj
+}
+
+```
+
+Currying 이 가능하니 부분적용 또한 가능할 것이다.

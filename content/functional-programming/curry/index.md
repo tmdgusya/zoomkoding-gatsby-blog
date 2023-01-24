@@ -56,7 +56,7 @@ fun applyAWithB(f: (a: Int, b:Int) -> Int): (Int) -> (Int) -> Int {
 
 ```kotlin
 val sum = { a: Int, b: Int -> a + b}
-val mult = { a: Int, b: Int -> a / b }
+val mult = { a: Int, b: Int -> a * b }
 applyAWithB(sum)(1)(2)
 applyAWithB(mult)(1)(2)
 ```

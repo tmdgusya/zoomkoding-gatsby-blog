@@ -118,3 +118,8 @@ fun <T : Any, R : Any> curriedLet(obj: T): ((T) -> R) -> R {
 ```
 
 Currying 이 가능하니 부분적용 또한 가능할 것이다.
+
+```kotlin
+val applyBlockWithOne = curriedLet<Int, (Int) -> Int>(1)
+applyBlockWithOne(curriedFunc)
+```

@@ -76,9 +76,9 @@ applyAWithB(sum)(1)(3)
 위 처럼 적을 수도 있지만, 아래처럼 1 이라는 값을 클로저에 포함시켜 활용도 가능하다.
 
 ```kotlin
-val plusOne = applyAWithB(sum)(1)
-val result1 = plusOne(2)
-val result2 = plusOne(3)
+val plusOneWith = applyAWithB(sum)(1)
+val result1 = plusOneWith(2)
+val result2 = plusOneWith(3)
 ```
 
 즉, **부분적용(Partial-Application)** 이란, 일반적으로 **함수의 첫번째 인자를 고정시키면 남은 나머지 인자에 대한 함수를 얻을 수 있음**을 뜻한다. 위의 코드를 예시로 들면 우리는 **a = 1 로 고정**된 `applyB(1)` 함수를 얻은 것 이다.

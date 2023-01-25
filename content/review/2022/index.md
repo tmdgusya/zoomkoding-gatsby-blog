@@ -1,6 +1,6 @@
 ---
 emoji: 
-title: 늦게 적는 상반기 회고
+title: 늦게 적는 2022년 회고
 date: '2023-01-25 19:00:00'
 author: Roach
 tags: 2022, 회고

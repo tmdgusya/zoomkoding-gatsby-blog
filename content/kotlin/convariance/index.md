@@ -81,7 +81,7 @@ data class Right<out R>(val r: R): Either<Nothing, R>()
 ## 반공변
 
 반공변은 공변의 반대로 타입의 상하관계가 반대로 작용하는 것을 의미한다.  
-즉, Box<Object> 가 Box<A> 의 하위타입이 되는 것이다.  
+즉, `Box<Object>` 가 `Box<A>` 의 하위타입이 되는 것이다.  
 
 ```kotlin
 open class Object

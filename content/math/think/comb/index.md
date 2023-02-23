@@ -1,5 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-
 ---
 emoji:
 title: 내가 생각하는 알고리즘 공부법
@@ -8,6 +6,7 @@ author: Roach
 tags: math
 categories: 생각
 ---
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 
 알고리즘을 공부하는 방법은 여러가지 있는데 
 

@@ -124,13 +124,32 @@ class LearningTest : FunSpec({
         val codec = Base64Codec()
         // initialize Base64 Class because we have to execute static block code before testing
         Class.forName("com.amazonaws.util.Base64")
+        Class.forName("javax.xml.bind.DatatypeConverter");
 
-        val hello = measureNanoTime { println("Hello") }
 
         // 1. Base64.encodeAsString
         val usingBase64 = measureNanoTime {
-            Base64.encodeAsString(-86, 24, 85, 104, 67, 51, 80, -80, -68, -48, -35, 28, 1, -92, -43, 110)
+            DatatypeConverter.printBase64Binary(byteArrayOf(
+                -86,
+                24,
+                85,
+                104,
+                67,
+                51,
+                80,
+                -80,
+                -68,
+                -48,
+                -35,
+                28,
+                1,
+                -92,
+                -43,
+                110
+            ))
         }
+
+        val hello = measureNanoTime { println("Hello") }
 
         // 2. CodecUtils.toStringDirect
         val usingCodeUtils = measureNanoTime {
@@ -163,7 +182,7 @@ class LearningTest : FunSpec({
         println("usingCodeUtils: $usingCodeUtils") // 386000
         println("hello: $hello") // 30417
 
-        // usingBase64 is faster than usingCodeUtils
+        // usingBase64 is faster than usingCodeUtils (fail)
         usingCodeUtils.shouldBeGreaterThan(usingBase64)
     }
 })

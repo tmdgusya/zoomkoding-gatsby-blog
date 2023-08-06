@@ -12,7 +12,7 @@ categories: kotlin image-process
 ## What is Scrimage?
 
 I have been searching for a good image processing library that can support converting images to webp and resizing images for Kotlin, and I had found this one. **Scrimage** is an immutable, functional, and performant JVM library for manipulating images. 
-I will tell you how to use this library for Kotlin Notebook.
+I will tell you how to use this library with Kotlin Notebook.
 
 ## Kotlin Notebook?
 

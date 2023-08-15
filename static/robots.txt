@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /ads.txt
+Sitemap: https://www.roach-dev.com/sitemap-index.xml
+Host: https://www.roach-dev.com
